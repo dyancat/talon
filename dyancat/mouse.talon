@@ -1,0 +1,5 @@
+mouse center: user.mouse_center_active_window()
+mouse screen [<number>]: user.mouse_center_screen(number or 1)
+nudge <user.arrow_keys>: user.mouse_nudge(arrow_keys)
+mouse show: user.halo_show()
+mouse hide: user.halo_hide()

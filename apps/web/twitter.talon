@@ -18,7 +18,6 @@ go likes: insert("gl")
 go lists: insert("gi")
 go direct messages: insert("gm")
 go settings: insert("gs")
-go book marks: insert("gb")
 go to user: insert("gu")
 display settings: insert("gd")
 # actions

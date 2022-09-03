@@ -40,12 +40,14 @@ def get_screen_by_offset(screen: ui.Screen, offset: int) -> ui.Screen:
 
 
 def get_sorted_screens():
-    """Return screens sorted by their topmost, then leftmost, edge.
-    Screens will be sorted leftto-right, then top-to-bottom as a tiebreak.
+    """Return screens sorted by their bottommost, then leftmost, edge.
+    Screens will be sorted top-to-bottom, then left-to-right as a tiebreak.
+    Customised by dyancat
     """
     return sorted(
-        ui.screens(),
-        key=lambda screen: screen.visible_rect.left,
+        sorted(ui.screens(), key=lambda screen: screen.visible_rect.left),
+
+        key=lambda screen: (screen.visible_rect.top + screen.visible_rect.height),
     )
 
 

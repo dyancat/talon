@@ -1,3 +1,5 @@
+tag: disabled
+-
 mouse grid:
     user.grid_select_screen(1)
     user.grid_activate()

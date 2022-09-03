@@ -25,9 +25,9 @@ class BrowserActions:
         actions.key("ctrl-shift-b")
 
     def focus_address():
-        actions.key("ctrl-l")
-        # action(browser.focus_page):
-
+        actions.key("ctrl-f6")
+        actions.key("f6")
+        #action(browser.focus_page):
     def focus_search():
         actions.browser.focus_address()
 
@@ -36,10 +36,10 @@ class BrowserActions:
 
     def go_back():
         actions.key("alt-left")
-
+        actions.key("ctrl-f6")
     def go_forward():
         actions.key("alt-right")
-
+        actions.key("ctrl-f6")
     def go_home():
         actions.key("alt-home")
 

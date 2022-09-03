@@ -1,6 +1,6 @@
 from talon import Context, Module, actions, app
 
-default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip".split(
+default_alphabet = "air bite cap drum each fine gust house sit jam crunch look made name odd pink queen red sun trap use vacant week plex yank zinc".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -110,7 +110,7 @@ def letters(m) -> str:
 ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
-    "alt": "alt",  #'alter': 'alt',
+    "alter": "alt",  #'alter': 'alt',
     "control": "ctrl",  #'troll':   'ctrl',
     "shift": "shift",  #'sky':     'shift',
     "super": "super",
@@ -177,16 +177,10 @@ symbol_key_words = {
     "left paren": "(",
     "R paren": ")",
     "right paren": ")",
+    "curly": "{",
     "brace": "{",
-    "left brace": "{",
-    "brack": "{",
-    "bracket": "{",
-    "left bracket": "{",
-    "r brace": "}",
+    "right curly": "}",
     "right brace": "}",
-    "r brack": "}",
-    "r bracket": "}",
-    "right bracket": "}",
     "angle": "<",
     "left angle": "<",
     "less than": "<",
@@ -228,16 +222,16 @@ simple_keys = [
     "pagedown",
     "pageup",
     "space",
-    "tab",
+    # "tab",
 ]
 
 alternate_keys = {
     "wipe": "backspace",
-    "delete": "backspace",
-    #'junk': 'backspace',
-    "forward delete": "delete",
+    "delete": "delete",
+    "junk": "backspace",
     "page up": "pageup",
     "page down": "pagedown",
+    "tablet": "tab"
 }
 # mac apparently doesn't have the menu key.
 if app.platform in ("windows", "linux"):
@@ -248,16 +242,6 @@ special_keys = {k: k for k in simple_keys}
 special_keys.update(alternate_keys)
 ctx.lists["self.special_key"] = special_keys
 ctx.lists["self.function_key"] = {
-    f"F {default_f_digits[i]}": f"f{i + 1}" for i in range(12)
+    f"function {default_f_digits[i]}": f"f{i + 1}" for i in range(12)
 }
 
-
-@mod.action_class
-class Actions:
-    def move_cursor(s: str):
-        """Given a sequence of directions, eg. 'left left up', moves the cursor accordingly using edit.{left,right,up,down}."""
-        for d in s.split():
-            if d in ("left", "right", "up", "down"):
-                getattr(actions.edit, d)()
-            else:
-                raise RuntimeError(f"invalid arrow key: {d}")
