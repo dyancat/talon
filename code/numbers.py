@@ -165,7 +165,7 @@ alt_scales = "(" + "|".join(scales_map.keys()) + ")"
 number_word = "(" + "|".join(numbers_map.keys()) + ")"
 # don't allow numbers to start with scale words like "hundred", "thousand", etc
 leading_words = numbers_map.keys() - scales_map.keys()
-leading_words -= {"oh", "o"}  # comment out to enable bare/initial "oh"
+# leading_words -= {"oh", "o"}  # comment out to enable bare/initial "oh"
 number_word_leading = f"({'|'.join(leading_words)})"
 
 # TODO: allow things like "double eight" for 88
