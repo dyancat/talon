@@ -18,7 +18,7 @@ def toggle_scroll():
 
 def start_scroll():
     global scroll_job, is_scrolling
-    scroll_job = cron.interval("60ms", scroll_continuous_helper)
+    scroll_job = cron.interval("40ms", scroll_continuous_helper)
     is_scrolling = True
 
 def stop_scroll():
