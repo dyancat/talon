@@ -24,8 +24,11 @@ right: edit.right()
 up: edit.up()
 down: edit.down()
 
-key(f20):
+key(f21):
 	user.mouse_center_active_window()
 	user.scroll_on()
 
-key(f20:up): user.scroll_off()
+key(f21:up): user.scroll_off()
+
+key(f20): key(left)
+key(f22): key(right)
