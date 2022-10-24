@@ -2,12 +2,12 @@ from talon import actions, noise, Module, imgui, cron
 
 mod = Module()
 
-scroll_amount = 30
+scroll_amount = 200
 is_scrolling = False
 
 def scroll_continuous_helper():
     global scroll_amount
-    actions.mouse_scroll(by_lines=False, y=int(80))
+    actions.mouse_scroll(by_lines=False, y=int(scroll_amount))
 
 def toggle_scroll():
     global is_scrolling
@@ -18,7 +18,7 @@ def toggle_scroll():
 
 def start_scroll():
     global scroll_job, is_scrolling
-    scroll_job = cron.interval("40ms", scroll_continuous_helper)
+    scroll_job = cron.interval("80ms", scroll_continuous_helper)
     is_scrolling = True
 
 def stop_scroll():

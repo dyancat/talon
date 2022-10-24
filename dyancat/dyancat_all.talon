@@ -8,6 +8,7 @@ drowse all:
 undrowse:
 	speech.enable()
 	user.window_highlight()
+	key(super-q)
 undrowse all:
 	speech.enable()
 	key(alt-.)
