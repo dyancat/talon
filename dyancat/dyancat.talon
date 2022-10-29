@@ -12,8 +12,6 @@ fourth: core.repeat_command(3)
 
 again: core.repeat_command(1)
 
-let: mimic("left")
-inter: mimic("enter")
 semi: ';'
 break: key(escape)
 void: key(space)
