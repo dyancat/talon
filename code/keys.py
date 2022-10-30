@@ -1,6 +1,6 @@
 from talon import Context, Module, actions, app
 
-default_alphabet = "air bite cap drum each fine gust house sit jam crunch look made name odd pink queen red sun trap us vacant week plex yank zinc".split(
+default_alphabet = "air bite cap dan each fine gust house sit jam crunch look made name odd pink queen red sun trap us vacant week plex yank zinc".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -110,10 +110,13 @@ def letters(m) -> str:
 ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
-    "alter": "alt",  #'alter': 'alt',
+    "alt": "alt",  #'alter': 'alt',
     "control": "ctrl",  #'troll':   'ctrl',
+    "troll": "ctrl",  #'troll':   'ctrl',
     "shift": "shift",  #'sky':     'shift',
+    "sky": "shift",  #'sky':     'shift',
     "super": "super",
+    "mod": "super",
 }
 if app.platform == "mac":
     modifier_keys["command"] = "cmd"
@@ -231,7 +234,7 @@ alternate_keys = {
     "junk": "backspace",
     "page up": "pageup",
     "page down": "pagedown",
-    "tablet": "tab"
+    "tab": "tab"
 }
 # mac apparently doesn't have the menu key.
 if app.platform in ("windows", "linux"):
