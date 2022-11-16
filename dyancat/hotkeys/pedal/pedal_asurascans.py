@@ -16,12 +16,6 @@ class Actions:
     def function20_up():
         """Executes when F20 is released"""
 
-    def function21():
-        """Executes when F21 is pressed"""
-
-    def function21_up():
-        """Executes when F21 is released"""
-
     def function22():
         """Executes when F22 is pressed"""
         actions.insert("]]")

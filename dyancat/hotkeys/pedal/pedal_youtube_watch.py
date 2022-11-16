@@ -3,7 +3,7 @@ from talon import Context, actions
 ctx = Context()
 ctx.matches = r"""
 tag: browser
-browser.host: /youtube\.com/
+browser.url: /youtube\.com\/watch/
 """
 
 @ctx.action_class("user")
