@@ -3,7 +3,8 @@ from talon import Context, actions
 ctx = Context()
 ctx.matches = r"""
 tag: browser
-browser.host: /reddit\.com/
+browser.url: /reddit.com(?!.*comments.*)/
+browser.url: /reddit.com\/r\/\w+(?!.*comments.*)/
 """
 
 @ctx.action_class("user")

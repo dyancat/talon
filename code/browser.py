@@ -27,4 +27,6 @@ class BrowserActions:
             url[1:-1] if not is_url(url) else url
             for url in reversed(actions.win.title().split(" "))
         )
-        return next((url for url in tokens if is_url(url)), "")
+        host = next((url for url in tokens if is_url(url)), "")
+        print("browser host is " + host)
+        return host
