@@ -11,21 +11,21 @@ browser.url: /reddit.com\/r\/\w+(?!.*comments.*)/
 class Actions:
     def pedal_left():
         """Executes when F20 is pressed"""
-        actions.key("k")
+        actions.key("a")
 
     def pedal_left_up():
         """Executes when F20 is released"""
 
     def pedal_middle():
         """Executes when F21 is pressed"""
-        actions.key("a")
+        actions.key("j")
 
     def pedal_middle_up():
         """Executes when F21 is released"""
 
     def pedal_right():
         """Executes when F22 is pressed"""
-        actions.key("j")
+        actions.key("E")
 
     def pedal_right_up():
         """Executes when F22 is released"""
