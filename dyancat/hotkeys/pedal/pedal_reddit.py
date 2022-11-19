@@ -9,23 +9,23 @@ browser.url: /reddit.com\/r\/\w+(?!.*comments.*)/
 
 @ctx.action_class("user")
 class Actions:
-    def function20():
+    def pedal_left():
         """Executes when F20 is pressed"""
         actions.key("k")
 
-    def function20_up():
+    def pedal_left_up():
         """Executes when F20 is released"""
 
-    def function21():
+    def pedal_middle():
         """Executes when F21 is pressed"""
         actions.key("a")
 
-    def function21_up():
+    def pedal_middle_up():
         """Executes when F21 is released"""
 
-    def function22():
+    def pedal_right():
         """Executes when F22 is pressed"""
         actions.key("j")
 
-    def function22_up():
+    def pedal_right_up():
         """Executes when F22 is released"""
