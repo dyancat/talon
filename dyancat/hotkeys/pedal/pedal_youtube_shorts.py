@@ -9,22 +9,22 @@ browser.url: /youtube\.com\/shorts/
 @ctx.action_class("user")
 class Actions:
     def pedal_left():
-        """Executes when F20 is pressed"""
+        """Executes when pedal left is pressed"""
         actions.key("up")
 
     def pedal_left_up():
-        """Executes when F20 is released"""
+        """Executes when pedal left is released"""
 
     def pedal_middle():
-        """Executes when F21 is pressed"""
+        """Executes when pedal middle is pressed"""
         actions.key("space")
 
     def pedal_middle_up():
-        """Executes when F21 is released"""
+        """Executes when pedal middle is released"""
 
     def pedal_right():
-        """Executes when F22 is pressed"""
+        """Executes when pedal right is pressed"""
         actions.key("down")
 
     def pedal_right_up():
-        """Executes when F22 is released"""
+        """Executes when pedal right is released"""
