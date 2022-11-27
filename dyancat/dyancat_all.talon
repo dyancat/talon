@@ -6,10 +6,11 @@ drowse all:
 	speech.disable()
 	key(alt-.)
 undrowse:
+	user.reset_mic()
 	speech.enable()
 	user.window_highlight()
-	key(super-q)
 undrowse all:
+	user.reset_mic()
 	speech.enable()
 	key(alt-.)
 	user.window_highlight()
