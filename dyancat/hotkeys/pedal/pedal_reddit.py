@@ -1,4 +1,5 @@
-from talon import Context, actions
+from talon import Context, actions, cron
+from datetime import datetime
 
 ctx = Context()
 ctx.matches = r"""
@@ -7,14 +8,31 @@ browser.url: /reddit.com(?!.*comments.*)/
 browser.url: /reddit.com\/r\/\w+(?!.*comments.*)/
 """
 
+left_long_pressed = False
+
+def on_left_long_pressed():
+    global left_long_pressed
+    actions.key("k")
+    left_long_pressed = True
+
 @ctx.action_class("user")
 class Actions:
     def pedal_left():
         """Executes when pedal left is pressed"""
-        actions.key("a")
+        global left_pressed_job
+        left_pressed_job = cron.after("300ms", on_left_long_pressed)
 
     def pedal_left_up():
         """Executes when pedal left is released"""
+        global left_pressed_job, left_long_pressed
+
+        if left_pressed_job:
+            cron.cancel(left_pressed_job)
+
+        if not left_long_pressed:
+            actions.key("a")
+
+        left_long_pressed = False
 
     def pedal_middle():
         """Executes when pedal middle is pressed"""
