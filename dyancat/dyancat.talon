@@ -12,6 +12,7 @@ fourth: core.repeat_command(3)
 
 again: core.repeat_command(1)
 
+head: key(home)
 semi: ';'
 break: key(escape)
 void: key(space)
