@@ -6,9 +6,11 @@ mod = Module()
 reset_mic_job = None
 
 def reset_mic():
-    global reset_mic_job
-    subprocess.run(r'D:\Dropbox\Backup\Autohotkey\SoundVolumeView.exe /SetVolume "Microphone" 99')
-    subprocess.run(r'D:\Dropbox\Backup\Autohotkey\SoundVolumeView.exe /SetVolume "Microphone" 100')
+    try:
+        subprocess.run(r'D:\Dropbox\Backup\Autohotkey\SoundVolumeView.exe /SetVolume "Microphone" 99')
+        subprocess.run(r'D:\Dropbox\Backup\Autohotkey\SoundVolumeView.exe /SetVolume "Microphone" 100')
+    except:
+        print("Failed to reset mic, skipping")
 
 
 def on_ready():
