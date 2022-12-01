@@ -4,7 +4,11 @@ browser.host: /reddit\.com/
 
 next: "j"
 last: "k"
-thread open: "E"
+open: "e"
+^blank$:
+	"E"
+	sleep(180ms)
+	app.tab_next()
 
 gallery next: "}"
 gallery last: "{"
