@@ -224,7 +224,7 @@ simple_keys = [
     "insert",
     "pagedown",
     "pageup",
-    "space",
+    # "space",
     # "tab",
 ]
 
@@ -236,7 +236,8 @@ alternate_keys = {
     "junk": "backspace",
     "page up": "pageup",
     "page down": "pagedown",
-    "tablet": "tab"
+    "tablet": "tab",
+    "void": "space"
 }
 # mac apparently doesn't have the menu key.
 if app.platform in ("windows", "linux"):
