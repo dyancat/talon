@@ -230,6 +230,8 @@ simple_keys = [
 
 alternate_keys = {
     "return": "enter",
+    "turn": "enter",
+    "head": "home",
     "tail": "end",
     "wipe": "backspace",
     "delete": "delete",
