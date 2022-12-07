@@ -229,7 +229,8 @@ simple_keys = [
 ]
 
 alternate_keys = {
-    "return": "enter",
+    # "go": "enter",
+    "run": "enter",
     "turn": "enter",
     "head": "home",
     "tail": "end",
