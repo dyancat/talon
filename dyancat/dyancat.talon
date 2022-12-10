@@ -10,7 +10,7 @@ twice: core.repeat_command(1)
 third: core.repeat_command(2)
 fourth: core.repeat_command(3)
 
-again: core.repeat_command(1)
+(gain|again): core.repeat_command(1)
 
 semi: ';'
 break: key(escape)
