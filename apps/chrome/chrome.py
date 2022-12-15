@@ -64,4 +64,5 @@ class browser_actions:
         actions.browser.focus_address()
         actions.sleep("50ms")
         actions.insert(url)
+        actions.sleep("50ms")
         actions.key("enter")

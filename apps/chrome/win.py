@@ -26,6 +26,7 @@ class BrowserActions:
 
     def focus_address():
         actions.key("ctrl-f6")
+        actions.sleep("50ms")
         actions.key("f6")
         #action(browser.focus_page):
     def focus_search():
