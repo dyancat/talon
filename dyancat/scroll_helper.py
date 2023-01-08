@@ -2,7 +2,7 @@ from talon import actions, noise, Module, imgui, cron
 
 mod = Module()
 
-scroll_amount = 100
+scroll_amount = 80
 is_scrolling = False
 
 def scroll_continuous_helper():

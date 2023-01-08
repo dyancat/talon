@@ -1,6 +1,6 @@
 from talon import Context, Module, actions, app
 
-default_alphabet = "air bat cap dan each fine gust house sit jam crunch look made name odd pink queen red sun trap you vacant week plex yank zinc".split(
+default_alphabet = "air bat cap drum each fine gust house sit jam crunch look made name odd pit queen red sun trap urge vest whale plex yank zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -229,9 +229,7 @@ simple_keys = [
 ]
 
 alternate_keys = {
-    # "go": "enter",
     "run": "enter",
-    "turn": "enter",
     "head": "home",
     "tail": "end",
     "wipe": "backspace",

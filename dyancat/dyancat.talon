@@ -21,3 +21,5 @@ left: edit.left()
 right: edit.right()
 up: edit.up()
 down: edit.down()
+
+mic reset: user.reset_mic()

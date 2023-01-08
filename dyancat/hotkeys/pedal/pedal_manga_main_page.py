@@ -4,6 +4,7 @@ ctx = Context()
 ctx.matches = r"""
 tag: browser
 browser.url: /asura\.gg\/manga/
+browser.url: /asurascans\.com\/manga/
 browser.url: /mm-scans\.org\/manga\/\w+\/?$/
 browser.url: /mangadex\.org\/title/
 browser.url: /webtoons\.com\/.*\/list/

@@ -3,7 +3,8 @@ from talon import Context, actions
 ctx = Context()
 ctx.matches = r"""
 tag: browser
-browser.url: /asura\.gg(.*chapter.*)/
+browser.url: /asurascans\.com(.*chapter.*)/
+browser.url: /asurascans\.com(.*chapter.*)/
 """
 
 @ctx.action_class("user")
