@@ -1,6 +1,6 @@
 from talon import Context, Module, actions, app
 
-default_alphabet = "air bat cap drum each fine gust house sit jam crunch look made name odd pit queen red sun trap urge vest whale plex yank zip".split(
+default_alphabet = "air bat cap drum each fine gust house sit jury crunch look made name odd pit queen red sun trap urge vest whale plex yank zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
