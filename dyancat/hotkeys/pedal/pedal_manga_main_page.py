@@ -9,6 +9,8 @@ browser.url: /mm-scans\.org\/manga\/\w+\/?$/
 browser.url: /mangadex\.org\/title/
 browser.url: /webtoons\.com\/.*\/list/
 browser.url: /reaperscans\.com\/comics\/(?!.*chapters.*)/
+browser.url: /kunmanga\.com\/manga\/(?!.*chapters.*)/
+browser.url: /mto\.to\/series/
 """
 
 @ctx.action_class("user")

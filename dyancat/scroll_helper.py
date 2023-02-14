@@ -2,12 +2,17 @@ from talon import actions, noise, Module, imgui, cron
 
 mod = Module()
 
+scroll_job = None
 scroll_amount = 80
 is_scrolling = False
 
-def scroll_continuous_helper():
+def down_scroll_continuous_helper():
     global scroll_amount
     actions.mouse_scroll(by_lines=False, y=int(scroll_amount))
+
+def up_scroll_continuous_helper():
+    global scroll_amount
+    actions.mouse_scroll(by_lines=False, y=int(-scroll_amount))
 
 def toggle_scroll():
     global is_scrolling
@@ -16,9 +21,16 @@ def toggle_scroll():
     else:
         start_scroll()
 
-def start_scroll():
+def start_scroll(direction = "DOWN"):
     global scroll_job, is_scrolling
-    scroll_job = cron.interval("25ms", scroll_continuous_helper)
+    if scroll_job:
+        cron.cancel(scroll_job)
+
+    if direction == "DOWN":
+        scroll_job = cron.interval("25ms", down_scroll_continuous_helper)
+    else:
+        scroll_job = cron.interval("25ms", up_scroll_continuous_helper)
+
     is_scrolling = True
 
 def stop_scroll():
@@ -26,7 +38,6 @@ def stop_scroll():
     if scroll_job:
         cron.cancel(scroll_job)
 
-    scroll_job = None
     is_scrolling = False
 
 def on_hiss(active):
@@ -53,9 +64,9 @@ class Actions:
         stop_scroll()
         gui_scroll.hide()
 
-    def scroll_on():
+    def scroll_on(direction: str):
         """Enables scroll mode"""
-        start_scroll()
+        start_scroll(direction)
 
     def scroll_off():
         """Disables scroll mode"""
